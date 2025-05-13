@@ -43,7 +43,7 @@ vars (And p q) = vars p ++ vars q
 vars (Or p q) = vars p ++ vars q
 vars (Imp p q) = vars p ++ vars q
 
--- 割り当て(全ての変数記号と真偽値の組の冪集合)を返す
+-- すべての割り当てを返す
 allAssignments :: [String] -> [Map String Bool]
 allAssignments xs = 
     let xs' = nub xs 
